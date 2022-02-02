@@ -1,0 +1,21 @@
+cd .\crudpy\
+python -m venv venv
+cd .\venv\Scripts\  
+.\activate
+
+pip install django
+
+\crudpy\venv\Scripts>cd ..
+\crudpy\venv>cd ..
+
+django startproject crudwithpy . crudwithpy #nome da pasta
+
+python manage.py
+
+python manage.py startapp app #<< app é o nome do projeto
+
+python manage.py runserver
+
+sempre que ligar o pc dnv, entrar no terminal(cmd) e mandar 
+\crudpy\venv\Scripts> cd ate ai e manda um
+activate
