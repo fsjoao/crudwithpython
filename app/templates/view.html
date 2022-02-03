@@ -10,7 +10,7 @@
 
 <body>
     <div class="col-8 m-auto pt-2 pb-2 text-center">
-        <h1>Cadastro</h1>
+        <h1>Vizualização</h1>
     </div>
  
     
@@ -21,13 +21,9 @@
     </div>
     
     <div class="col-8 m-auto pt-4 pb-2 text-center">
-        <form name="form" id="form" action="/create/" method="post">
-            {% csrf_token %}
-            <div class="form-group mt-4">Model: {{form.model}}</div>
-            <div class="form-group mt-4">Brand: {{form.brand}}</div>
-            <div class="form-group mt-4">Year: {{form.year}}</p></p></div>
-            <input type="submit" class="btn btn-success" value="Salvar">
-       </form>
+        <strong>Model:</strong>{{db.model}}<br>
+        <strong>Brand:</strong>{{db.brand}}<br>
+        <strong>Year:</strong>{{db.year}}<br>
     </div>
     
     
