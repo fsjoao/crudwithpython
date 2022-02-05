@@ -21,10 +21,11 @@
     </div>
     
     <div class="col-8 m-auto pt-4 pb-2 text-center">
-        <!--     <form name="form" id="form" action="/create/" method="post">     -->
+        <div id="result"></div>
         <form name="form" id="form" action="{% if db %}/update/{{db.id}}/{%else%}/create/{% endif %}" method="post">
 
             {% csrf_token %}
+            <!--{{form.as_p}}-->
             <div class="form-group mt-4">Model: {{form.model}}</div>
             <div class="form-group mt-4">Brand: {{form.brand}}</div>
             <div class="form-group mt-4">Year: {{form.year}}</p></p></div>
@@ -34,7 +35,6 @@
     
     {% load static %}
     <script src='{% static 'javascript.js' %}' ></script>
-
     
 </body>
 </html>
