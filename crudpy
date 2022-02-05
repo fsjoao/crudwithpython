@@ -19,3 +19,14 @@ python manage.py runserver
 sempre que ligar o pc dnv, entrar no terminal(cmd) e mandar 
 \crudpy\venv\Scripts> cd ate ai e manda um
 activate
+    
+
+git add . < o ponto adiciona tudo
+
+git status so pra dar um confere no que vai mudar
+
+manda um
+
+git commit -m "a mensagem q quer pro commit"
+
+git push origin head << e vahaaaaaai ou vohooooi?

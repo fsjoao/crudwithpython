@@ -45,7 +45,7 @@
             <td>
               <a href="/view/{{dbs.id}}/" class='btn btn-info'>Visualizar</a>
               <a href="/edit/{{dbs.id}}/" class="btn btn-primary">Editar</a>
-              <a href="" class="btn btn-danger">Deletar</a>
+              <a href="/delete/{{dbs.id}}/" class="btn btn-danger btnDel">Deletar</a>
             </td>
           </tr>
           {% endfor %}
@@ -56,5 +56,11 @@
           </tr>
         </tbody>
       </table>
+
+      
+  {% load static %}
+  <script src='{% static 'javascript.js' %}' ></script>
+
+
 </body>
 </html>
