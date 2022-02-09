@@ -1,6 +1,10 @@
+from http import server
+from pyexpat import model
+from re import search
 from django.shortcuts import redirect, render
 from app.forms import CarrosForm
 from app.models import Carros
+from django.core.paginator import Paginator
 # Create your views here.
 
 def home(request):
@@ -46,3 +50,20 @@ def delete(request, pk):
     db = Carros.objects.get(pk=pk)
     db.delete()
     return redirect('home')
+
+#def home (request):     ##Pages
+    data = {}
+    all = Carros.objects.all()
+    paginator = Paginator(all, 5)
+    pages = request.GET.get('page')
+    data['db'] = paginator.get_page(pages)
+    return render(request, 'index.html', data)
+
+def home(request):
+    data = {}
+    search = request.GET.get('search')
+    if search:
+        data['db'] = Carros.objects.filter(model__icontains=search)
+    else:
+        data['db'] = Carros.objects.all()
+    return render(request, 'index.html', data)
